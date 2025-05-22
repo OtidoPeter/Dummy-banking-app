@@ -9,4 +9,9 @@ func main() {
 	fmt.Println("2. Deposit money")
 	fmt.Println("3. Withdraw money")
 	fmt.Println("4. Exit")
+
+	var choice int
+	fmt.Scan(&choice)
+
+	fmt.Println("Your choice: ", choice)
 }
