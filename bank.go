@@ -54,8 +54,10 @@ func main() {
 			fmt.Println("Balance updated! New amount:", accountBalance)
 		} else {
 			fmt.Println("Goodbye!")
-			return
+			//return // one way of exiting
+			break // breaks out of the loop, makes sure that the loop is ended.
 		}
 
 	} // i= i+1
+	fmt.Println("Thanks for choosing our bank.")
 }
