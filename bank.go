@@ -42,7 +42,8 @@ func main() {
 
 			if withdrawalAmount <= 0 {
 				fmt.Println("Invalid amount. Must be greater than 0.")
-				return
+				// return
+				continue // tells go to skip the rest of the current iteration, and continue with the next
 			}
 
 			if withdrawalAmount > accountBalance {
