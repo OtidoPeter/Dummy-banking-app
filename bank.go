@@ -38,18 +38,13 @@ func main() {
 		fmt.Println("ERROR")
 		fmt.Println(err)
 		fmt.Println("------------")
-		panic("Can't continue, sorry.")
+		// panic("Can't continue, sorry.")
 	}
 
 	fmt.Print("Welcome to Go Bank!")
 
 	for { // created an inifinite loop
-
-		fmt.Println("What do you want to do?")
-		fmt.Println("1. Check balance")
-		fmt.Println("2. Deposit money")
-		fmt.Println("3. Withdraw money")
-		fmt.Println("4. Exit")
+		presentOptions()
 
 		var choice int
 		fmt.Print("Your choice: ")
@@ -138,4 +133,11 @@ func main() {
 		}*/
 
 	}
+}
+func presentOptions() {
+	fmt.Println("What do you want to do?")
+	fmt.Println("1. Check balance")
+	fmt.Println("2. Deposit money")
+	fmt.Println("3. Withdraw money")
+	fmt.Println("4. Exit")
 }
