@@ -24,6 +24,12 @@ func main() {
 		fmt.Print("Your deposit: ")
 		var depositAmount float64
 		fmt.Scan(&depositAmount)
+
+		if depositAmount <= 0 {
+			fmt.Println("Invalid amount. Must be greater than 0.")
+			return // will only do that if the deposit amount is invalid
+		}
+
 		accountBalance += depositAmount // accountBalance = accountBalance + depositAmount
 
 		fmt.Println("Balance updated! New amount:", accountBalance)
