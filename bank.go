@@ -9,9 +9,19 @@ import (
 const accountBalanceFile = "balance.txt"
 
 func getBalanceFromFile() float64 {
-	data, _ := os.ReadFile(accountBalanceFile)
+	data, err := os.ReadFile(accountBalanceFile)
+
+	if err != nil {
+		return 1000.0
+	}
+
 	balanceText := string(data)
-	balance, _ := strconv.ParseFloat(balanceText, 64)
+	balance, err := strconv.ParseFloat(balanceText, 64)
+
+	if err != nil {
+		return 1000.0
+	}
+
 	return balance
 }
 
